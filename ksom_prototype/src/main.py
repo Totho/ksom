@@ -37,6 +37,8 @@ class KSOMWindow(Frame):
         Button(f, text='show colors', command=self.showColors).pack(side=LEFT)        
         f.pack()
 
+    #test 
+
     def step(self):
         self.network.cycle([random.randint(0, 255) for i in range(3)])
 
