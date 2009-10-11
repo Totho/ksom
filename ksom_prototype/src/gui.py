@@ -52,5 +52,3 @@ class Grid:
     def setCellColors(self, colorFunc=lambda x: '#FFF'):
         for node in self.network.nodes:
             self.setCellColor(node.xPos, node.yPos, colorFunc(node))
-
-#test

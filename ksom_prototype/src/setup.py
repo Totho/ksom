@@ -22,6 +22,4 @@ setup (
   long_description= 'Long description of the package',
 
   # could also include long_description, download_url, classifiers, etc.
-
-  
 )
