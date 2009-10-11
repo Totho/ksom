@@ -26,7 +26,7 @@ def colorBMUCount(node):
 class KSOMWindow(Frame):
     def __init__(self, app):
         Frame.__init__(self, app)
-        self.network = ksom.Network(50, 50, 3, numIterations = 100,
+        self.network = ksom.Network(60, 60, 3, numIterations = 100,
             randFunc = lambda: random.randint(0, 255))
         self.grid = gui.Grid(self, self.network, pScale=6)
 
