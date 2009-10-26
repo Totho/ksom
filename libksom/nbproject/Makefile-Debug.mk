@@ -31,6 +31,9 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/ksom_map.o \
+	${OBJECTDIR}/ksom_error.o \
+	${OBJECTDIR}/ksom_node.o \
 	${OBJECTDIR}/ksom.o
 
 # C Compiler Flags
@@ -58,6 +61,21 @@ dist/Debug/MinGW-Windows/liblibksom.a: ${OBJECTFILES}
 	${RM} dist/Debug/MinGW-Windows/liblibksom.a
 	${AR} rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibksom.a ${OBJECTFILES} 
 	$(RANLIB) dist/Debug/MinGW-Windows/liblibksom.a
+
+${OBJECTDIR}/ksom_map.o: nbproject/Makefile-${CND_CONF}.mk ksom_map.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_map.o ksom_map.c
+
+${OBJECTDIR}/ksom_error.o: nbproject/Makefile-${CND_CONF}.mk ksom_error.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_error.o ksom_error.c
+
+${OBJECTDIR}/ksom_node.o: nbproject/Makefile-${CND_CONF}.mk ksom_node.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_node.o ksom_node.c
 
 ${OBJECTDIR}/ksom.o: nbproject/Makefile-${CND_CONF}.mk ksom.c 
 	${MKDIR} -p ${OBJECTDIR}

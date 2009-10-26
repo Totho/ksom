@@ -11,9 +11,10 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
-    void ksom_test();
-
+    
+    #include "ksom_error.h"
+    #include "ksom_map.h"
+    #include "ksom_node.h"
 
 #ifdef	__cplusplus
 }
