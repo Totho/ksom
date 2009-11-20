@@ -12,11 +12,11 @@ MKDIR=mkdir
 CP=cp
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=mingw32-gcc.exe
-CCC=g++.exe
-CXX=g++.exe
+CC=gcc
+CCC=g++
+CXX=g++
 FC=
-AS=as.exe
+AS=as
 
 # Macros
 CND_PLATFORM=MinGW-Windows
@@ -32,9 +32,8 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/ksom_map.o \
-	${OBJECTDIR}/ksom_error.o \
 	${OBJECTDIR}/ksom_node.o \
-	${OBJECTDIR}/ksom.o
+	${OBJECTDIR}/ksom_error.o
 
 # C Compiler Flags
 CFLAGS=
@@ -67,20 +66,15 @@ ${OBJECTDIR}/ksom_map.o: nbproject/Makefile-${CND_CONF}.mk ksom_map.c
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_map.o ksom_map.c
 
-${OBJECTDIR}/ksom_error.o: nbproject/Makefile-${CND_CONF}.mk ksom_error.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_error.o ksom_error.c
-
 ${OBJECTDIR}/ksom_node.o: nbproject/Makefile-${CND_CONF}.mk ksom_node.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_node.o ksom_node.c
 
-${OBJECTDIR}/ksom.o: nbproject/Makefile-${CND_CONF}.mk ksom.c 
+${OBJECTDIR}/ksom_error.o: nbproject/Makefile-${CND_CONF}.mk ksom_error.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom.o ksom.c
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/ksom_error.o ksom_error.c
 
 # Subprojects
 .build-subprojects:

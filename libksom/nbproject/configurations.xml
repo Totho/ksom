@@ -16,7 +16,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ksom.c</itemPath>
       <itemPath>ksom_error.c</itemPath>
       <itemPath>ksom_map.c</itemPath>
       <itemPath>ksom_node.c</itemPath>

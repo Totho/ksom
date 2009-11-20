@@ -15,7 +15,7 @@
 extern "C" {
 #endif
     #define max(a, b) a > b ? a : b
-    
+
     typedef struct _ksom_map_options {
         int x_dim;
         int y_dim;
@@ -36,7 +36,6 @@ extern "C" {
         ksom_node *nodes;
     } ksom_map;
 
-    
     
     KSOM_ERROR ksom_map_init(ksom_map *map, ksom_map_options *opts);
     KSOM_ERROR ksom_map_cycle(ksom_map *map, double *fv);

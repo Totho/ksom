@@ -18,7 +18,8 @@ KSOM_ERROR ksom_node_init(ksom_node *node, int x_pos, int y_pos, int fv_size) {
         return KSOM_NOMEM;
 
     for (i = 0; i < fv_size; ++i)
-        node->fv[i] = rand();
+        //generate a random uniform double
+        node->fv[i] = (double) (rand() + 1) / (double) (RAND_MAX + 1);
     
     return KSOM_OK;
 }

@@ -21,8 +21,7 @@ extern "C" {
         double *fv;
         double bmu_distance;
         double fv_distance;
-    } ksom_node;    
-
+    } ksom_node;
 
     KSOM_ERROR ksom_node_init(ksom_node *node, int x_pos, int y_pos, int fv_size);
     KSOM_ERROR ksom_node_free(ksom_node *node);

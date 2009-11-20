@@ -41,10 +41,10 @@ class Node:
         self.fvDistance = euDistanceSq(self.fv, fv)
         return self.fvDistance
 
-    def train(self, fv):
+    def train(self, fv, kValue):
         influence = math.exp(-self.physDistance / self.network.nhRadius * 2)
         for i in range(len(fv)):
-            self.fv[i] += influence * (fv[i] - self.fv[i])
+            self.fv[i] += influence * kValue * (fv[i] - self.fv[i])
 
 
 class Network:
@@ -94,7 +94,7 @@ class Network:
         for node in self.nodes:
             node.calcPhysDistance(self.bmu)
             if node.physDistance < self.nhRadius:
-                node.train(fv)
+                node.train(fv, self.kValue)
 
         self.iterationCount += 1
 
