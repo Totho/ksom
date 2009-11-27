@@ -31,6 +31,7 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/config.o \
 	${OBJECTDIR}/grid.o \
 	${OBJECTDIR}/main.o
 
@@ -59,6 +60,11 @@ dist/Debug/MinGW-Windows/libksom_example.exe: ../libksom/dist/Release/MinGW-Wind
 dist/Debug/MinGW-Windows/libksom_example.exe: ${OBJECTFILES}
 	${MKDIR} -p dist/Debug/MinGW-Windows
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libksom_example ${OBJECTFILES} ${LDLIBSOPTIONS} 
+
+${OBJECTDIR}/config.o: nbproject/Makefile-${CND_CONF}.mk config.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../libksom -MMD -MP -MF $@.d -o ${OBJECTDIR}/config.o config.cpp
 
 ${OBJECTDIR}/grid.o: nbproject/Makefile-${CND_CONF}.mk grid.cpp 
 	${MKDIR} -p ${OBJECTDIR}
