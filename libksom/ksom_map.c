@@ -109,7 +109,7 @@ static void setLearningRate(ksom_map *map) {
             exp(-(double)map->iteration_count / (double)map->options.num_iterations);
 }
 
-//radius = map_radius * e^(-iteration/t_const)
+//nh_radius = map_radius * e^(-iteration/t_const)
 static void setNeighborhoodRadius(ksom_map *map) {
     map->nh_radius = map->radius *
             exp(-(double)map->iteration_count / map->t_constant);
